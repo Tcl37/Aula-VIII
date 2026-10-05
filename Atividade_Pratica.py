@@ -85,15 +85,44 @@ class Moto(Veiculo):
 
 
 # ----------------------------------
+# ENTRADA DOS DADOS
 
-C1 = Carro("Toyota", "Corolla", 2022, "fechada")
-M1 = Moto("Honda", "CB 600", 2023, "retornada")
+print("=== CADASTRO DO CARRO ===")
 
-print(C1.get_marca())
+marca_carro = input("Digite a marca do carro: ")
+modelo_carro = input("Digite o modelo do carro: ")
+ano_carro = int(input("Digite o ano do carro: "))
+porta_carro = input("Digite o estado da porta (aberta/fechada): ")
+
+C1 = Carro(marca_carro, modelo_carro, ano_carro, porta_carro)
+
+
+print("\n=== CADASTRO DA MOTO ===")
+
+marca_moto = input("Digite a marca da moto: ")
+modelo_moto = input("Digite o modelo da moto: ")
+ano_moto = int(input("Digite o ano da moto: "))
+estado_moto = input("Digite o estado da moto (retornada/empinada): ")
+
+M1 = Moto(marca_moto, modelo_moto, ano_moto, estado_moto)
+
+
+# ----------------------------------
+# EXIBIÇÃO
+
+print("\n=== INFORMAÇÕES DO CARRO ===")
+
+print("Marca:", C1.get_marca())
+print("Modelo:", C1.get_modelo())
+print("Ano:", C1.get_ano())
 print(C1.acao())
 print(C1.abrir_porta())
 
-print(M1.get_modelo())
+
+print("\n=== INFORMAÇÕES DA MOTO ===")
+
+print("Marca:", M1.get_marca())
+print("Modelo:", M1.get_modelo())
+print("Ano:", M1.get_ano())
 print(M1.acao())
 print(M1.empinar_moto())
-    
